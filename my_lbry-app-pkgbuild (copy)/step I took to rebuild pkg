@@ -1,0 +1,22 @@
+#LBRY PKGBUILD (MY FIRST)
+-----------------------------------------
+
+###these are the step I took to rebuild unmaintained package
+
+
+
+clone repo from git hub or find deb file
+use debtap app to make pkgbuild file
+used old pkgbuild file to fix the new one
+change -dependants to:
+
+depends=('libnotify' 'libappindicator-gtk2' 'libxtst' 'nss' 'libsecret')
+
+and the bttm 6 lines to:
+
+package() {
+    install -dm 755 "$pkgdir/usr/bin/"
+    tar -xf "$srcdir/data.tar.xz" -C "$pkgdir"
+    ln -s "/opt/LBRY/lbry" "$pkgdir/usr/bin/lbry"
+    ln -s "/opt/LBRY/resources/static/daemon/lbrynet" "$pkgdir/usr/bin/"
+}
