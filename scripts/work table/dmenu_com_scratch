@@ -1,0 +1,29 @@
+dmenu examples
+----------------------
+dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+
+DT's example
+-----------------------
+dmenu_run -c -bw 2 -l 20 -g 4 -p 'Run: '
+This launches dmenu_run with -c (centered), -bw (border width), -l (number of vertical lines) and -g (number of grid columns).
+clipmenu
+-----------------------
+clipmenu -i -fn Terminus:size=8 -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#93a1a1'
+
+my download-script
+------------------------
+(placed inside DT's dmenu git clone)
+
+dmenu_run_history
+
+        # will try to copy/paste onto one of other examples
+
+dmenu_run_history -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+
+# this is both put together
+---------------------------------- 
+dmenu_run_history -c -bw 2 -l 20 -g 4 -p 'Copy:' -fn 'NotoMonoRegular:bold:pixelsize=14' -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919 ' 
+usage: dmenu [-bfiv] [-l lines] [-p prompt] [-fn font] [-m monitor]
+             [-h height]
+             [-nb color] [-nf color] [-sb color] [-sf color]
+             [-nhb color] [-nhf color] [-shb color] [-shf color] [-w windowid]
